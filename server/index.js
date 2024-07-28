@@ -9,6 +9,7 @@ const io = socketIo(server, {
   cors: {
     origin: "*", // Replace with your frontend URL
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
@@ -16,6 +17,7 @@ app.use(
   cors({
     origin: "*", // Replace with your frontend URL
     methods: ["GET", "POST"],
+    credentials: true,
   })
 );
 
