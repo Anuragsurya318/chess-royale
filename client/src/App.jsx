@@ -11,7 +11,7 @@ const App = () => {
   const [opponentMove, setOpponentMove] = useState(null);
 
   useEffect(() => {
-    const newSocket = io("http://localhost:3001");
+    const newSocket = io("https://chess-royale-server.vercel.app/");
     setSocket(newSocket);
 
     newSocket.on("connect", () => {
