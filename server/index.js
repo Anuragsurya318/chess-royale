@@ -7,14 +7,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://chess-royale-omega.vercel.app/", // Replace with your frontend URL
+    origin: "*", // Replace with your frontend URL
     methods: ["GET", "POST"],
   },
 });
 
 app.use(
   cors({
-    origin: "https://chess-royale-omega.vercel.app/", // Replace with your frontend URL
+    origin: "*", // Replace with your frontend URL
     methods: ["GET", "POST"],
     credentials: true,
   })
